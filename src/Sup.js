@@ -1,10 +1,12 @@
 import React from 'react';
 import moment from 'moment';
-import {HashRouter as NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 let AuthorLink = ({sup}) => {
     // console.log(sup)
-    return (<NavLink to={{pathname: `/users/${sup.name}`}}>{sup.name}</NavLink>)
+    return (
+    <NavLink to={`/users/${sup.name}`}>{sup.name}</NavLink>
+    )
 }
 
 let Sup = ({sup}) =>
@@ -14,7 +16,7 @@ let Sup = ({sup}) =>
     </div>
     <div className="content-container">
         <div className="username">
-            <h3 className="sup-author-time">{sup.name}</h3>&nbsp;• {moment(sup.time).fromNow()}
+            <h3 className="sup-author-time"><AuthorLink sup={sup} /></h3>&nbsp;• {moment(sup.time).fromNow()}
         </div>
         <p className="sup-body">{sup.body}</p>
     </div>
