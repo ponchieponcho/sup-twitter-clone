@@ -10,9 +10,14 @@ let TopLevel = () =>
  <Router>
     <div>
         <nav id="nav">
-            <NavLink activeClassName="selected" to="/">*Home*</NavLink>
-            <NavLink activeClassName="selected" to="/users">*All Users*</NavLink>
-            <NavLink activeClassName="selected" to="/users/Illia">*User [Illia] Profile*</NavLink>
+        <div className="dropdown">
+          <button className="dropbtn">MENU</button>
+          <div className="dropdown-content">
+            <NavLink activeClassName="selected" to="/">Home</NavLink>
+            <NavLink activeClassName="selected" to="/users">Sups</NavLink>
+            <NavLink activeClassName="selected" to="/users/Illia">Profile</NavLink>
+            </div>
+          </div>
         </nav>
         <Switch>
         <Route path="/" exact component={Homepage} />
