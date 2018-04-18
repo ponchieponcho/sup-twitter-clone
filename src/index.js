@@ -28,7 +28,7 @@ let TopLevel = () =>
     </div>
 </Router>
 
-const NoMatch = ({ location }) => (
+let NoMatch = ({ location }) => (
     <div>
       <h3>
         No match for <code>{location.pathname}</code>
