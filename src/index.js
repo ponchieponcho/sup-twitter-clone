@@ -15,7 +15,6 @@ let TopLevel = () =>
           <div className="dropdown-content">
             <NavLink activeClassName="selected" to="/">Home</NavLink>
             <NavLink activeClassName="selected" to="/users">Sups</NavLink>
-            <NavLink activeClassName="selected" to="/users/Illia">Profile</NavLink>
             </div>
           </div>
         </nav>

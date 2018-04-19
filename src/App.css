@@ -17,13 +17,41 @@ ul,li {
 .body-top-half {
   background-color: white;
   flex-basis: 50%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+/* .content-top-half {
+
+} */
+
+.twitterIcon-bird {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 9;
+  align-self: center;
+}
+
 .body-lower-half {
   background-color: #1da1f2;
   flex-basis: 50%;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
+.bottom-list {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  z-index: 10;
+
+}
 .sup-container {
   border-bottom: .1px solid grey;
   padding: 5px;
@@ -36,6 +64,7 @@ ul,li {
   display:flex;
   flex-direction: column;
   margin-left: 10px;
+  max-width: 400px;
 }
 
 .username {
@@ -48,7 +77,9 @@ ul,li {
   min-width: 50px;
   border-radius: 50%;
 }
-
+.image-container {
+  margin-bottom: 15px;
+}
 p {
   margin-top: 0px;
 }
@@ -96,4 +127,13 @@ a {
 
 .dropdown:hover .dropbtn {
   background-color: #1da1f2;
+}
+
+@media screen and (min-width:930px) {
+  .content-container{
+    max-width: 800px;
+  }
+  .image-container {
+    margin-bottom: 5px;
+  }
 }
