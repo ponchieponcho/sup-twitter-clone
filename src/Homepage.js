@@ -8,8 +8,8 @@ let Homepage = () =>
     <h1>See what’s happening in</h1>
     <h1>the world right now</h1>
     <h3>Join Twitter today.</h3>
-    <button>Sign Up</button><br/>
-    <button>Log In</button>
+    <button className="btn">Sign Up</button><br/>
+    <button className="btn2">Log In</button>
     </ul>
   </div>
   <div className="body-lower-half">

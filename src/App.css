@@ -31,6 +31,7 @@ ul,li {
   position: absolute;
   right: 0;
   width: 50%;
+  max-width: 500px;
   z-index: 9;
   align-self: center;
 }
@@ -127,6 +128,45 @@ a {
 
 .dropdown:hover .dropbtn {
   background-color: #1da1f2;
+}
+
+.btn {
+  background: #1da1f2;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 400px;
+  margin: 10px;
+}
+
+.btn:hover {
+  background: #1da1f2;
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.btn2 {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #1da1f2;
+  font-size: 20px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #0fa3ff 2px;
+  text-decoration: none;
+  width: 400px;
+  margin: 10px;
+
+}
+
+.btn2:hover {
+  background-image: linear-gradient(to bottom, rgb(190, 190, 190), rgb(190, 190, 190));
+  text-decoration: none;
 }
 
 @media screen and (min-width:930px) {
