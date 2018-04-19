@@ -11,10 +11,10 @@ let AuthorLink = ({sup}) => {
 
 let Sup = ({sup}) =>
 <div className="sup-container">
-    <div className="image-container">
+    <div className="image-container animated fadeIn">
     <img src={sup.thumbnailUrl} className="profile-image" alt="pic"/>
     </div>
-    <div className="content-container">
+    <div className="content-container animated fadeIn">
         <div className="username">
             <h3 className="sup-author-time"><AuthorLink sup={sup} /></h3>&nbsp;• {moment(sup.time).fromNow()}
         </div>
