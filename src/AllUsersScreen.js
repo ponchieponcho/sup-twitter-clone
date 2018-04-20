@@ -8,6 +8,7 @@ class AllUsersScreen extends React.Component {
             sups: []
         };
     }
+    
 componentDidMount () {
     this.fetchData();
 }
