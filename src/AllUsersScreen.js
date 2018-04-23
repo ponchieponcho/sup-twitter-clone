@@ -1,34 +1,31 @@
 import React from 'react';
 import SupList from './SupList';
+import {connect} from 'react-redux';
+import {actionUpdateSupList} from './actions/sups';
 
-class AllUsersScreen extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            sups: []
-        };
-    }
-    
-componentDidMount () {
-    this.fetchData();
+let mapStateToProps = (state) => {
+    return {sups: state.sups};
+  }
+
+let mapDispatchToProps = (dispatch) => {
+    return {updateSupList: () => {
+        fetch('http://localhost:3000/api/posts')
+        .then(res => res.json())
+        .then(fetchSups => {
+            dispatch(actionUpdateSupList(fetchSups))
+        })
+    }}
 }
 
-fetchData() {
-    fetch('http://localhost:3000/api/posts')
-        .then((res) => {
-            return res.json();
-        })
-        .then(sups => {
-            this.setState({sups})
-        })
-}
+let AllUsersScreen = ({sups, updateSupList}) => {
 
-render() {
-    let {sups} = this.state;
-    return(
+   updateSupList();
+//     console.log(sups)
+    return (
+        // <h1>hi</h1>
         <SupList sups={sups} />
-     )
+    )
 }
-    }
 
-export default AllUsersScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(AllUsersScreen);
+
