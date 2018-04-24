@@ -14,8 +14,6 @@ let initState = {sups:[], users:[]};
 let reducer = (state = initState, action) => {
   switch(action.type) {
     case UPDATE_SUPLIST:
-      console.log('Firing CREATE_SUPLIST action')
-      console.log(action.payload)
       let sups = action.payload;
       return {...state, sups: sups}
       

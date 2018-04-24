@@ -20,9 +20,8 @@ let mapDispatchToProps = (dispatch) => {
 let AllUsersScreen = ({sups, updateSupList}) => {
 
    updateSupList();
-//     console.log(sups)
+   
     return (
-        // <h1>hi</h1>
         <SupList sups={sups} />
     )
 }
